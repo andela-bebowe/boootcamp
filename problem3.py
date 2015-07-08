@@ -4,7 +4,6 @@ def search_file(file_txt):
 	line_number = 1
 	count = 0
 	total_count = 0
-	cha = ""
 	while line_number < 2015:
 		no_upper = 0
 		no_lower = 0
