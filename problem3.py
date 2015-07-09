@@ -4,7 +4,7 @@ def search_file(file_txt):
 	line_number = 1
 	count = 0
 	total_count = 0
-	while line_number < 2015:
+	while line_number < len(my_file):
 		no_upper = 0
 		no_lower = 0
 		no = 0
@@ -26,3 +26,4 @@ def search_file(file_txt):
 	#return the number of counts after the while loop	
 	return count
 print search_file("password.txt")
+

@@ -1,6 +1,7 @@
 numb = 10
 def fib_main(num):
 	if type(num) != int or num <= 0 or num >= 12000:
+		print "illegal variable"
 		return -1
 
 def fib_gen(num):
@@ -16,14 +17,25 @@ def fib_gen(num):
 		num -= 1
 	return seq_list
 
-def fib_sum(num):
-	fib_main(num)
-	seq_list = fib_gen(num)
+def fib_sum(num, b = None):
 	seq_list_sum = 0
-	for numb in seq_list:
-		seq_list_sum += numb
-	return seq_list_sum
+	if b == None:
+		seq_list = fib_gen(num)
+		for number in seq_list:
+			seq_list_sum += number
+		return seq_list_sum
+	elif b == "even":
+		even_list = fib_even(num)
+		for number in even_list:
+			seq_list_sum += number
+		return seq_list_sum
+	elif b == "odd":
+		odd_list = fib_odd(num)
+		for number in odd_list:
+			seq_list_sum += number
+		return seq_list_sum
 
-print fib_gen(numb)
-print fib_sum(numb)
-
+def fib_odd(num):
+	pass
+def fib_even(num):
+	pass
